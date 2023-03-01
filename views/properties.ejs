@@ -1,0 +1,29 @@
+<%- include('includes/header.ejs') %>
+<body>
+    <% properties.forEach(property =>{ %>
+        <div class="container-properties">
+            <div class="propertyElementOfListImages">
+                <% property.image.map(obj =>{ %>
+                    <img class="property_img" src="<%=obj%>">
+                    <%  }) %>
+            </div>
+                <div class="propertyElementOfListData">
+                    <p>Kraj: <%= property.id %> </p>
+                    <p>Kraj: <%= property.country %> </p>
+                    <p>region: <%= property.region %> </p>
+                    <p>Rynek: <%= property.market %> </p>
+                    <p>Typ: <%= property.type %> </p>
+                    <p>Widok na morze: <%= property.seaview %></p>
+                    <p>Sypialnie: <%= property.bedrooms %></p>
+                    <p>Łazienki: <%= property.bathrooms %></p>
+                    <p>Garaz: <%= property.parking %></p>
+                    <p>Basen: <%= property.pool %></p>
+                    <p>Solarium: <%= property.garage %></p>
+                    <p>Basen: <%= property.pool %></p>
+                    <p>Opis: <%= property.desctription %></p>
+        </div>    
+    </div>
+   <%  }) %>
+</body>
+</html>
+

@@ -1,0 +1,137 @@
+<%- include('includes/header.ejs') %>
+<body>
+    <form class="add-property" action="/properties" method="POST" enctype="multipart/form-data">
+
+        <label id="id">Numer oferty (nadany automatycznie)</label>
+        <input name="id" value="<%= id %>" readonly></input>
+
+        <label id="country" style="padding-top:10px">Kraj</label>
+        <select name="country">
+            <option value="Hiszpania">Hiszpania</option>
+            <option value="Portugalia">Portugalia</option>
+            <option value="Chorwacja">Chorwacja</option>
+        </select>
+
+        <label id="region" style="padding-top:10px">Region</label>
+        <input name="region">
+
+        <label id="city" style="padding-top:10px">Miasto</label>
+        <input name="city">
+
+        <label id="favorites" style="padding-top:10px">Wyróżniona?</label>
+        <select name="favorites">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <label id="country" style="padding-top:10px">Polecana na stronie gównej?</label>
+        <select name="addtohomeview" >
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <label id="title" style="padding-top:10px">Tytuł na portal</label>
+        <textarea name="title"></textarea>
+
+        <label id="market" style="padding-top:10px">Rynek</label>
+        <select name="market" >
+            <option value="First">Pierwotny</option>
+            <option value="Second">Wtórny</option>
+        </select>
+
+        <label id="type" style="padding-top:10px">Typ</label>
+        <select name="type">
+            <option value="Dom">Dom</option>
+            <option value="Apartament">Apartament</option>
+            <option value="Bungalow">Bungalow</option>
+        </select>
+
+        <label id="seaview" style="padding-top:10px">Widok na morze</label>
+        <select name="seaview">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <label id="firstline" style="padding-top:10px">Pierwsza linia brzegowa</label>
+        <select name="firstline">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <p style="padding-top:10px; font-weight:800">O Nieruchomości:</p>
+
+        <label id="bathrooms" style="padding-top:10px">Łazienki</label>
+        <input name="bathrooms">
+
+        <label id="bedrooms" style="padding-top:10px">Sypilanie</label>
+        <input name="bedrooms">
+
+        <label id="pool" style="padding-top:10px">Basen</label>
+        <select name="pool">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <label id="garden" style="padding-top:10px">Ogród</label>
+        <select name="garden">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <label id="parking" style="padding-top:10px">Parking</label>
+        <select name="parking">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <label id="solarium" style="padding-top:10px">Solarium</label>
+        <select name="solarium">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <label id="sauna" style="padding-top:10px">Sauna</label>
+        <select name="sauna">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <label id="taras" style="padding-top:10px">Taras</label>
+        <select name="taras">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <label id="balcony" style="padding-top:10px">Balkon</label>
+        <select name="balcony">
+            <option value="true">Tak</option>
+            <option value="false">Nie</option>
+        </select>
+
+        <label id="price" style="padding-top:10px">Cena</label>
+        <input name="price">
+
+        <label id="distance" style="padding-top:10px">Do plazy/morza</label>
+        <input name="distance" type="text">
+
+        <label id="localization" style="padding-top:10px">Lokalizacja(link google)</label>
+        <input name="localization">
+
+        <label id="meters" style="padding-top:10px">Powierznia obiektu</label>
+        <input type="number" name="powierzchnia">
+        
+        <label id="owner" style="padding-top:10px">Źródło</label>
+        <input name="owner" type="text">
+
+        <label id="description" style="padding-top:10px">Opis nieruchomości</label>
+        <textarea class="description"name="description"></textarea>
+
+        <label id="PropImages" style="padding-top:10px">Zdjęcia</label>
+        <input type="file" multiple name="PropImages">
+
+        <button>Add property</button>
+    </form>
+
+</body>
+
+</html>
